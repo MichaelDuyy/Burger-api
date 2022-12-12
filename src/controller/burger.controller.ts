@@ -87,8 +87,7 @@ export async function updateBurgerScoreHandler(req: Request<UpdateBurgerScoreInp
     const newReview = burger.reviews + 1;
     const newScore = (burger.score * burger.reviews + update.score) / newReview;
 
-    console.log(newReview);
-    console.log(newScore);
+
     const updatedBurger = await findAndUpdateBurger({burgerId}, {score: newScore, reviews: newReview}, {
         new: true,
     });
@@ -132,7 +131,6 @@ export async function deleteBurgerHandler(req: Request, res: Response) {
 
 export async function getAllBurgerHandler(req: Request, res: Response) {
     const burgers = await fndAllBurgers();
-    console.log(burgers);
     if(!burgers) {
         return res.sendStatus(404);
     }
