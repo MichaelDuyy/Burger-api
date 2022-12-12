@@ -15,7 +15,6 @@ export async function createBurgerHandler(req: Request<{}, {}, CreateBurgerInput
         console.log(restaurant)
         if(restaurant.name === body.restaurant) {
             restaurantId = restaurant.restaurantId;
-            console.log("DE ER ENS")
         }
     }
 
@@ -51,7 +50,6 @@ export async function updateBurgerHandler(req: Request<UpdateBurgerInput['params
         console.log(restaurant)
         if(restaurant.name === update.restaurant) {
             restaurantId = restaurant.restaurantId;
-            console.log("DE ER ENS")
         }
     }
 

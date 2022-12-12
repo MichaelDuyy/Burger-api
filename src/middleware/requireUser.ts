@@ -5,7 +5,6 @@ const requireUser = (req: Request, res: Response, next: NextFunction) => {
     if(!user) {
         return res.sendStatus(403);
     }
-    console.log("USER HER", user);
     return next();
 };
 
