@@ -8,7 +8,7 @@ services:
       - burger-data:/data/db
   mongo-express:
     image: mongo-express
-    restart: always # fixes MongoNetworkError when mongodb is not ready when mongo-express starts
+    restart: always 
     ports:
       - 8081:8081
     environment:
