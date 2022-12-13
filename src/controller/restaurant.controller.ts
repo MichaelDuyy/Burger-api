@@ -67,7 +67,6 @@ export async function deleteRestaurantHandler(req: Request, res: Response) {
 
 export async function getAllRestaurantHandler(req: Request, res: Response) {
     const restaurants = await fndAllRestaurants();
-    console.log(restaurants);
     if(!restaurants) {
         return res.sendStatus(404);
     }

@@ -19,6 +19,5 @@ export async function deleteBurger(query: FilterQuery<BurgerDocument>) {
 }
 
 export async function fndAllBurgers() {
-    console.log("IUHGYBHIJNKIOBHJNKMNJBHKNLM")
     return BurgerModel.find();
 }
